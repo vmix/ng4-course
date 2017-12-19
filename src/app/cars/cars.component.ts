@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {setTimeout} from 'timers';
 
 @Component({
-  selector: '.app-cars',
+  selector: 'app-cars',
   templateUrl: './cars.component.html',
   styleUrls: ['./cars.component.css']
 })
-export class CarsComponent implements OnInit {
 
-  constructor() { }
+export class CarsComponent {
+  addCarStatus = '';
 
-  ngOnInit() {
+  constructor() {
   }
 
+  addCar() {
+    this.addCarStatus = 'The car is added';
+  }
 }
+
